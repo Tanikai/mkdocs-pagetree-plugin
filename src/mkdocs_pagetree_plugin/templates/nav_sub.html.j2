@@ -10,8 +10,9 @@ SPDX-License-Identifier: MIT
 </li>
 {%- else %}
   <li>
+    {{ nav_item.title }}
     <details>
-    <summary>{{ nav_item.title }}</summary>
+    <summary>Expand</summary>
     <ul>
         {%- for nav_item in nav_item.children %}
             {% include "nav_sub.html.j2" %}
